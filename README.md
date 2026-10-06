@@ -70,3 +70,12 @@ git clone <your-repo-url>
 cd integrated-finance-management-portal-for-iit-mandi
 npm install
 npm run dev
+```
+
+## Reimbursement workflows
+
+The `/reimbursements` workspace supports employee, faculty and student travel/purchase claims, School Office approval records, separate central stock entries, Audit, and Finance & Accounts processing. The existing `/apply-bill` form also submits through this workflow and retains the original purchase fields.
+
+Before using it, apply `supabase/migrations/202610060001_reimbursements.sql` to your Supabase project and configure the server-side `SUPABASE_SERVICE_ROLE_KEY` and `NEXTAUTH_URL` along with the existing authentication settings. The migration creates the claims table, private document bucket and atomic finance transition function. It does not automatically migrate old bills.
+
+See [the reimbursement workflow guide](docs/reimbursement-workflow.md) for the full routing matrix, role mapping, funding behavior and test commands. Payment references are recorded after external disbursement; the portal does not initiate bank transfers.

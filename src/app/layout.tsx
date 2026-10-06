@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import SidebarLayout from "@/components/Sidebar";
 import NextAuthProvider from "../providers/SessionProvider"; // wrap session
+import ReimbursementNavigation from "@/components/reimbursements/Navigation";
 
 export const metadata: Metadata = {
   title: "IIT Mandi Finance Portal",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-gray-50 text-gray-900">
         <NextAuthProvider>
+          <ReimbursementNavigation />
           {/* Sidebar + Page Layout */}
           {children}
         </NextAuthProvider>

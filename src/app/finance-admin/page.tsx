@@ -1169,6 +1169,8 @@ export default function FinanceAdminDashboard() {
                     <option value="Finance Admin">Finance Admin</option>
                     <option value="Audit">Audit</option>
                     <option value="Student Purchase">Stores and Purchase</option>
+                    <option value="School Office">School Office</option>
+                    <option value="Store & Purchase">Store & Purchase</option>
                     <option value="bill_employee_edit">bill_employee_edit</option>
                     <option value="bill_employee_fill">bill_employee_fill</option>
                     <option value="pda-manager">pda-manager</option>

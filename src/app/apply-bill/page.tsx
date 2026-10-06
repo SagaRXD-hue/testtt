@@ -76,7 +76,6 @@ export default function EmployeeDashboard() {
   }, [session, activePage]);
 
   const handleBillSubmitted = () => {
-    setActivePage("history");
     refreshBills();
   };
 
